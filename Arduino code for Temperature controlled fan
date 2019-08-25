@@ -43,3 +43,12 @@ fanSpeed=1.5*fanSpeed;
 fanLCD = map(temp, tempMin, tempMax, 0, 100); // speed of fan to display on LCD100
 analogWrite(fan, fanSpeed); // spin the fan at the fanSpeed speed
 }
+if(temp > tempMax) // if temp is higher than tempMax
+{
+digitalWrite(led, HIGH); // turn on led
+}
+else // else turn of led
+{
+digitalWrite(led, LOW);
+}
+lcd.setCursor(3,0);
