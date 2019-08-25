@@ -8,3 +8,18 @@ int tempMin = 10; // the temperature to start the fan 0%
 int tempMax = 50; // the maximum temperature when fan is at 100%
 int fanSpeed;
 int fanLCD;
+void setup() {
+pinMode(fan, OUTPUT);
+pinMode(led, OUTPUT);
+pinMode(tempPin, INPUT);
+lcd.begin(16,3);
+lcd.setCursor(2,1);
+lcd.print(" Started");
+delay(1000);
+lcd.clear();
+lcd.setCursor(1,0);
+lcd.print("Cse299");
+delay(1000);
+lcd.clear();
+Serial.begin(9600);
+}
