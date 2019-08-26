@@ -58,3 +58,11 @@ lcd.setCursor(2,1);
 lcd.print("Temperature......");
 delay(3000);
 lcd.clear();
+lcd.setCursor(3,0);
+lcd.print("Temperature = ");
+lcd.setCursor(3,1);
+lcd.print(temp); // display the temperature
+lcd.print("C ");
+delay (1000);
+lcd.clear();
+lcd.setCursor(0,1); // move cursor to next line
