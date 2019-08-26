@@ -52,3 +52,9 @@ else // else turn of led
 digitalWrite(led, LOW);
 }
 lcd.setCursor(3,0);
+lcd.print("Recording :  ");
+
+lcd.setCursor(2,1);
+lcd.print("Temperature......");
+delay(3000);
+lcd.clear();
