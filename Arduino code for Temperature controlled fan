@@ -66,3 +66,14 @@ lcd.print("C ");
 delay (1000);
 lcd.clear();
 lcd.setCursor(0,1); // move cursor to next line
+lcd.print("FANS: ");
+lcd.print(fanLCD); // display the fan speed
+lcd.print("%");
+delay(2000);
+lcd.clear();
+}
+
+int readTemp() { // get the temperature and convert it to celsius
+temp = analogRead(tempPin);
+return temp * 0.48828125;
+}
